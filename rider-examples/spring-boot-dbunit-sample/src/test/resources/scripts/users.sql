@@ -1,3 +1,5 @@
+DELETE FROM USERS;
+
 INSERT INTO USERS (id, email, name)
 VALUES
     (-1, 'dbunit@gmail.com', 'dbunit'),
