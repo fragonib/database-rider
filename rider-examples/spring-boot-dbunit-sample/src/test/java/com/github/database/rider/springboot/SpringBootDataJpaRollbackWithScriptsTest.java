@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DBRider
 @DataJpaTest
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class SpringBootDataJpaRollbackWithSpriptsBeforTest {
+class SpringBootDataJpaRollbackWithScriptsTest {
 
     @Autowired
     UserRepository userRepository;
