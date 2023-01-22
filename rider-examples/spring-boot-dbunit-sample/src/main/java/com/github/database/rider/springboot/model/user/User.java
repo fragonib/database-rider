@@ -2,6 +2,8 @@ package com.github.database.rider.springboot.model.user;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
+import java.util.StringJoiner;
 
 @Entity
 @Table(name = "users")
@@ -60,15 +62,22 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         User user = (User) o;
-
-        return id == user.id;
-
+        return email.equals(user.email) && name.equals(user.name);
     }
 
     @Override
     public int hashCode() {
-        return (int) (id ^ (id >>> 32));
+        return Objects.hash(email, name);
     }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("email='" + email + "'")
+                .add("name='" + name + "'")
+                .toString();
+    }
+
 }

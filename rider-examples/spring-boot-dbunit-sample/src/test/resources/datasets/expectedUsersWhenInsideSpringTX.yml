@@ -8,3 +8,9 @@ USERS:
   - ID: -3
     EMAIL: "springboot@gmail.com"
     NAME: "springboot"
+  - ID: -4
+    EMAIL: "junit5@gmail.com"
+    NAME: "junit5"
+  - ID: 1
+    EMAIL: "bdd@cucumber.com"
+    NAME: "cucumber"
